@@ -15,6 +15,8 @@ services:
 
     volumes:
       - ..:/workspace:cached
+      - ./logs/xdebug:/logs/xdebug
+      - ./logs/php-fpm/:/tmp/xdebug_log
 
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
